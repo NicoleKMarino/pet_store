@@ -1,0 +1,13 @@
+<%= flash.now[:error] %>
+<%= flash[:notice] %>
+<h1>Login</h1>
+<%=form_for :session, url:login_path do |f|%>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<br></br>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.submit "Login" %>
+<%end %>
+<br></br>
+<%= link_to "Create a New User", new_user_path%>
